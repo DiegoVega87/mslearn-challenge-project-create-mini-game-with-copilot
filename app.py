@@ -12,16 +12,17 @@ playercount = 0
 computercount = 0
 # create a while loop that will run until the user enters a stop 
 # value of 'q' or 'Q'
-while True:
+while valid == True:
     # create a variable called user_input that prompts the user to
     # enter a string or 'q' to quit
-    user_input = input("Enter a rock, paper, scissors or 'q' to quit: ").lower
+    user_input = input("Enter a rock, paper, scissors or 'q' to quit: ")
+    user_input = user_input.lower()
     # create a try/except block that will check if the user entered 'rock','paper', 'scissors' or 'q'
     # if the user entered 'rock','paper', 'scissors' or 'q' set valid to True
     # else print "Invalid input"
     try:
         if user_input == 'rock' or user_input == 'paper' or user_input == 'scissors' or user_input == 'q':
-        
+            valid = True
         else:
             print("Invalid input")
     except:
